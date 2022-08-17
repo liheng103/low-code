@@ -3,7 +3,7 @@
 
     <div class="main">
       <nav class="leftPart">
-        <raw-components></raw-components>
+        <!-- <raw-components></raw-components> -->
       </nav>
       <div class="rightPart">
         <tools-bar @previewModeChange="previewModeChange" @editModeChange="editModeChange" @redo="redo" @undo="undo" @structureVisible="structureVisible = true"></tools-bar>
@@ -12,12 +12,12 @@
             <!-- 渲染控制面板 -->
           </div>
         </div>
-        <edit-attribute :enableRemoveButton="true" class="attribute" @save="onSaveAttr" @remove="onRemove" ref="attributeInput" shortcutInitMode="hand" :__rawVueInfo__="currentEditRawInfo">
-        </edit-attribute>
+        <!-- <edit-attribute :enableRemoveButton="true" class="attribute" @save="onSaveAttr" @remove="onRemove" ref="attributeInput" shortcutInitMode="hand" :__rawVueInfo__="currentEditRawInfo">
+        </edit-attribute> -->
       </div>
     </div>
 
-    <div class="noticePart">
+    <!-- <div class="noticePart">
       <el-tooltip effect="dark" content="二次编辑" placement="top-start">
         <div class="roundIcon" alt="" @click="vueDialogVisible = true">Vue</div>
       </el-tooltip>
@@ -32,15 +32,15 @@
           <div class="roundIcon" alt="">Del</div>
         </template>
       </el-popconfirm>
-    </div>
+    </div> -->
 
     <div class="codePart">
     </div>
 
-    <div id="fullScreen" v-if="!editMode">
+    <!-- <div id="fullScreen" v-if="!editMode">
       <div style="margin: 20px; font-weight: bold;">按下ESC退出预览模式</div>
       <div id="mountedEle"></div>
-    </div>
+    </div> -->
   </div>
 
 </template>
@@ -51,9 +51,9 @@
     name: 'LayOut',
     components: {
       //仅在页面需要它渲染时才会调用加载内部实际组件的函数
-      RawComponents: defineAsyncComponent(() => import("./RawComponents")),
+      // RawComponents: defineAsyncComponent(() => import("./RawComponents")),
       ToolsBar: defineAsyncComponent(() => import("./ToolsBar")),
-      EditAttribute: defineAsyncComponent(() => import("./EditAttribute")),
+      // EditAttribute: defineAsyncComponent(() => import("./EditAttribute")),
     },
     data() {
       return {

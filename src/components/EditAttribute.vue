@@ -1,11 +1,11 @@
 <template>
-  <el-card class="editAttribute">
+  <div class="editAttribute">
 
     <div style="text-align: center;">
       <el-switch v-model="editMode" active-text="自由编辑" inactive-text="约束编辑" active-color="#13ce66" inactive-color="#13ce66">
       </el-switch>
     </div>
-    <div style="margin-top: 20px;">
+    <!-- <div style="margin-top: 20px;">
       <div name="1" v-show="!editMode">
         <div>
           <div class="item" v-for="(item, index) in localAttributes" :key="index">
@@ -38,8 +38,8 @@
         <el-input type="textarea" :autosize="{ minRows: 4}" placeholder="请输入属性, 以key: value的形式(冒号后要有空格)" v-model="textAttributes">
         </el-input>
       </div>
-    </div>
-    <div style="margin-top: 10px;text-align:center;">
+    </div> -->
+    <!-- <div style="margin-top: 10px;text-align:center;">
       <el-tooltip class="item" effect="dark" content="新增属性 ctrl+a" placement="bottom">
         <el-button type="primary" class="center" @click="createNew" circle>
           <el-icon>
@@ -71,12 +71,39 @@
       <div style="text-algin: center;">
         <span class="shortcutTip">支持快捷键操作</span>
       </div>
-    </div>
-  </el-card>
+    </div> -->
+  </div>
 </template>
 <script>
   import keymaster from "keymaster"
   export default {
+    data: function () {
+      return {
+        input: "",
+        localAttributes: [],
+        enable: true,
+        autoplay: false,
+        editMode: false,
+        textAttributes: ''
+      };
+    },
+    mounted() {
+      const container = document.querySelector(".editAttribute");
+      container.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+
+      if (this.shortcutInitMode === 'auto') {
+        // 这种方式用于在检视图中，因为它依赖组件的创建和销毁
+        this.initShortcut();
+      }
+    },
+    beforeUnmount() {
+      if (this.shortcutInitMode === 'auto') {
+        // 防止内存泄漏
+        this.destroyShortcut();
+      }
+    },
     methods: {
       destroyShortcut() {
         console.log(`destroyShortcut by mode: ${this.shortcutInitMode}`)
@@ -116,6 +143,10 @@
   };
 </script>
 <style scoped lang="scss">
+  .editAttribute {
+    height: 100%;
+    border-top: 1px solid #f0f0f0;
+  }
   .container {
     padding: 10px;
     width: 50%;
