@@ -48,7 +48,7 @@
             index: 0,
             titleChinese: "按钮",
             titleEnglish: "Button",
-            componentName: 'LCButton',
+            componentName: 'Button',
           },
           {
             index: 1,
