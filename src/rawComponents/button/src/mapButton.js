@@ -225,7 +225,7 @@ export default {
       "style": {
         "height": "40px",
         "width": "98px",
-        "backgroundColor": "#fff"
+        "backgroundColor": "rgb(255, 255, 255)"
       }
     },
     {
@@ -296,7 +296,7 @@ export default {
       "style": {
         "height": "40px",
         "width": "98px",
-        "backgroundColor": "#fff"
+        "backgroundColor": "rgb(255, 255, 255)"
       }
     },
     {
@@ -367,7 +367,7 @@ export default {
       "style": {
         "height": "40px",
         "width": "98px",
-        "backgroundColor": "#fff"
+        "backgroundColor": "rgb(255, 255, 255)"
       }
     },
     {
@@ -381,7 +381,7 @@ export default {
       "style": {
         "height": "36px",
         "width": "98px",
-        "backgroundColor": "#fff"
+        "backgroundColor": "rgb(255, 255, 255)"
       }
     },
     {

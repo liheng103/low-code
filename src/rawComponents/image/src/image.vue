@@ -6,7 +6,7 @@
     alt=""
     v-bind="$attrs"
     @click="handleImgClick"
-    draggable
+    draggable="true"
     @dragstart="handleDragstart"
     @dragend="handleDragend"
   />
@@ -28,7 +28,7 @@ export default {
     const handleImgClick = (evt) => {
       emit('click', evt);
     };
-    const handleDragStart = (evt) => {
+    const handleDragstart = (evt) => {
       emit('dragstart', evt);
     };
     const handleDragend = (evt) => {
@@ -37,7 +37,7 @@ export default {
     return {
       handleImgClick,
       propsCopy,
-      handleDragStart,
+      handleDragstart,
       handleDragend,
       imageStyle
     };

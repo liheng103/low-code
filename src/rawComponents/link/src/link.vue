@@ -3,7 +3,7 @@
     id="link"
     :href="propsCopy.disabled ? null : propsCopy.href"
     @click="handleLinkClick"
-    draggable
+    draggable="true"
     @dragstart="handleDragStart"
     @dragend="handleDragend"
     :class="[
