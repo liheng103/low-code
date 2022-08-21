@@ -1,5 +1,5 @@
 export default {
-  "type": "button",
+  "type": "image",
   "data": [
     {
       "id": 1,
