@@ -3,29 +3,54 @@ export default {
   "data": [
     {
       "id": 1,
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
-        "color": "#606266"
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
       }
     },
     {
       "id": 2,
-      "value": "",
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
-        "color": "#409eff"
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(64, 158, 255)"
       }
     },
     {
       "id": 3,
-      "value": "",
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
-        "color": ""
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#67c23a"
       }
     },
     {
       "id": 4,
-      "class": "lc-button--info",
-      "value": "",
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -34,8 +59,12 @@ export default {
     },
     {
       "id": 5,
-      "class": "lc-button-danger",
-      "value": "",
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -45,8 +74,12 @@ export default {
 
     {
       "id": 6,
-      "class": "lc-button--default is-plain",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -55,8 +88,12 @@ export default {
     },
     {
       "id": 7,
-      "class": "lc-button--primary is-plain",
-      "value": "",
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -65,8 +102,12 @@ export default {
     },
     {
       "id": 8,
-      "class": "lc-button--success is-plain",
-      "value": "",
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -75,8 +116,12 @@ export default {
     },
     {
       "id": 9,
-      "class": "lc-button--info is-plain",
-      "value": "",
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -85,8 +130,12 @@ export default {
     },
     {
       "id": 10,
-      "class": "lc-button--danger is-plain",
-      "value": "",
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -96,8 +145,12 @@ export default {
 
     {
       "id": 11,
-      "class": "lc-button--default is-round",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -106,8 +159,12 @@ export default {
     },
     {
       "id": 12,
-      "class": "lc-button--primary is-round",
-      "value": "",
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -116,8 +173,12 @@ export default {
     },
     {
       "id": 13,
-      "class": "lc-button--success is-round",
-      "value": "",
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -126,8 +187,12 @@ export default {
     },
     {
       "id": 14,
-      "class": "lc-button--info is-round",
-      "value": "",
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -136,8 +201,12 @@ export default {
     },
     {
       "id": 15,
-      "class": "lc-button-danger is-round",
-      "value": "",
+      "class": "danger",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
+      "value": "按钮",
       "style": {
         "height": "40px",
         "width": "98px",
@@ -147,8 +216,12 @@ export default {
 
     {
       "id": 16,
-      "class": "lc-button--default is-disabled",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -157,8 +230,12 @@ export default {
     },
     {
       "id": 17,
-      "class": "lc-button--primary is-disabled",
-      "value": "",
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -167,8 +244,12 @@ export default {
     },
     {
       "id": 18,
-      "class": "lc-button--success is-disabled",
-      "value": "",
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -177,8 +258,12 @@ export default {
     },
     {
       "id": 19,
-      "class": "lc-button--info is-disabled",
-      "value": "",
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -187,8 +272,12 @@ export default {
     },
     {
       "id": 20,
-      "class": "lc-button-danger is-disabled",
-      "value": "",
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -198,8 +287,12 @@ export default {
 
     {
       "id": 21,
-      "class": "lc-button--default is-disabled is-plain",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -208,8 +301,12 @@ export default {
     },
     {
       "id": 22,
-      "class": "lc-button--primary is-disabled is-plain",
-      "value": "",
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -218,8 +315,12 @@ export default {
     },
     {
       "id": 23,
-      "class": "lc-button--success is-disabled is-plain",
-      "value": "",
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -228,8 +329,12 @@ export default {
     },
     {
       "id": 24,
-      "class": "lc-button--info is-disabled is-plain",
-      "value": "",
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -238,8 +343,12 @@ export default {
     },
     {
       "id": 25,
-      "class": "lc-button-danger is-disabled is-plain",
-      "value": "",
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -249,8 +358,12 @@ export default {
 
     {
       "id": 26,
-      "class": "lc-button--default",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
         "height": "40px",
         "width": "98px",
@@ -259,8 +372,12 @@ export default {
     },
     {
       "id": 27,
-      "class": "lc-button--default lc-button--medium",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "medium",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "36px",
         "width": "98px",
@@ -269,8 +386,12 @@ export default {
     },
     {
       "id": 28,
-      "class": "lc-button--default lc-button--small",
-      "value": "",
+      "class": "default",
+      "value": "按钮",
+      "size": "small",
+      "disabled": true,
+      "round": false,
+      "plain": true,
       "style": {
         "height": "32px",
         "width": "80px",
