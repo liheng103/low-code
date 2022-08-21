@@ -1,8 +1,13 @@
 <template>
   <div class="editAttribute">
-
-    <div style="text-align: center;">
-      <el-switch v-model="editMode" active-text="自由编辑" inactive-text="约束编辑" active-color="#13ce66" inactive-color="#13ce66">
+    <div style="text-align: center">
+      <el-switch
+        v-model="editMode"
+        active-text="自由编辑"
+        inactive-text="约束编辑"
+        active-color="#13ce66"
+        inactive-color="#13ce66"
+      >
       </el-switch>
     </div>
     <!-- <div style="margin-top: 20px;">
@@ -133,83 +138,83 @@
   </div>
 </template>
 <script>
-  import keymaster from "keymaster"
-  export default {
-    data: function () {
-      return {
-        input: "",
-        localAttributes: [],
-        enable: true,
-        autoplay: false,
-        editMode: false,
-        textAttributes: ''
-      };
-    },
-    mounted() {
-      const container = document.querySelector(".editAttribute");
-      container.addEventListener("click", (event) => {
-        event.stopPropagation();
-      });
+import keymaster from 'keymaster';
+export default {
+  data: function () {
+    return {
+      input: '',
+      localAttributes: [],
+      enable: true,
+      autoplay: false,
+      editMode: false,
+      textAttributes: ''
+    };
+  },
+  mounted() {
+    const container = document.querySelector('.editAttribute');
+    container.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
 
-      if (this.shortcutInitMode === 'auto') {
-        // 这种方式用于在检视图中，因为它依赖组件的创建和销毁
-        this.initShortcut();
-      }
+    if (this.shortcutInitMode === 'auto') {
+      // 这种方式用于在检视图中，因为它依赖组件的创建和销毁
+      this.initShortcut();
+    }
+  },
+  beforeUnmount() {
+    if (this.shortcutInitMode === 'auto') {
+      // 防止内存泄漏
+      this.destroyShortcut();
+    }
+  },
+  methods: {
+    destroyShortcut() {
+      console.log(`destroyShortcut by mode: ${this.shortcutInitMode}`);
+      keymaster.unbind('⌘+a, ctrl+a');
+      keymaster.unbind('⌘+s, ctrl+s');
+      keymaster.unbind('⌘+d, ctrl+d');
+      keymaster.unbind('⌘+c, ctrl+c');
     },
-    beforeUnmount() {
-      if (this.shortcutInitMode === 'auto') {
-        // 防止内存泄漏
-        this.destroyShortcut();
-      }
-    },
-    methods: {
-      destroyShortcut() {
-        console.log(`destroyShortcut by mode: ${this.shortcutInitMode}`)
-        keymaster.unbind('⌘+a, ctrl+a');
-        keymaster.unbind('⌘+s, ctrl+s');
-        keymaster.unbind('⌘+d, ctrl+d');
-        keymaster.unbind('⌘+c, ctrl+c');
-      },
-      initShortcut() {
-        console.log(`init by mode: ${this.shortcutInitMode}`)
-        keymaster('⌘+a, ctrl+a', () => {
-          if (this.enable) {
-            this.createNew();
-            return false
-          }
-        });
-        keymaster('⌘+s, ctrl+s', () => {
-          if (this.enable) {
-            this.save();
-            return false
-          }
-        });
-        keymaster('⌘+d, ctrl+d', () => {
-          if (this.enable) {
-            this.remove();
-            return false
-          }
-        });
-        keymaster('⌘+c, ctrl+c', () => {
-          if (this.enable && this.enableBroButton) {
-            this.copyBro();
-            return false
-          }
-        });
-      },
-    },
+    initShortcut() {
+      console.log(`init by mode: ${this.shortcutInitMode}`);
+      keymaster('⌘+a, ctrl+a', () => {
+        if (this.enable) {
+          this.createNew();
+          return false;
+        }
+      });
+      keymaster('⌘+s, ctrl+s', () => {
+        if (this.enable) {
+          this.save();
+          return false;
+        }
+      });
+      keymaster('⌘+d, ctrl+d', () => {
+        if (this.enable) {
+          this.remove();
+          return false;
+        }
+      });
+      keymaster('⌘+c, ctrl+c', () => {
+        if (this.enable && this.enableBroButton) {
+          this.copyBro();
+          return false;
+        }
+      });
+    }
+  }
 };
 </script>
 <style scoped lang="scss">
-  .editAttribute {
-    height: 100%;
-    border-top: 1px solid #f0f0f0;
-  }
-  .container {
-    padding: 10px;
-    width: 50%;
-    text-align: center;
-  }
+.editAttribute {
+  height: 100%;
+  border-top: 1px solid #f0f0f0;
+}
+.container {
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
 .halfWidth {
   width: 0%;
   flex-grow: 2;
