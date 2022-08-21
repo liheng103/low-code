@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="button">
     <lc-button ref="butttonRef">Default</lc-button>
     <lc-button type="primary">primary</lc-button>
     <lc-button type="success">success</lc-button>
