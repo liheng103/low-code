@@ -3,123 +3,400 @@ export default {
   "data": [
     {
       "id": 1,
-      "class": "lc-button--default",
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
       "style": {
-
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
       }
     },
     {
       "id": 2,
-      "class": "lc-button--primary"
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(64, 158, 255)"
+      }
     },
     {
       "id": 3,
-      "class": "lc-button--success"
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#67c23a"
+      }
     },
     {
       "id": 4,
-      "class": "lc-button--info"
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#909399"
+      }
     },
     {
       "id": 5,
-      "class": "lc-button-danger"
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f56c6c"
+      }
     },
 
     {
       "id": 6,
-      "class": "lc-button--default is-plain"
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
+      }
     },
     {
       "id": 7,
-      "class": "lc-button--primary is-plain"
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#ecf5ff"
+      }
     },
     {
       "id": 8,
-      "class": "lc-button--success is-plain"
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f0f9eb"
+      }
     },
     {
       "id": 9,
-      "class": "lc-button--info is-plain"
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f4f4f5"
+      }
     },
     {
       "id": 10,
-      "class": "lc-button--danger is-plain"
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f56c6c"
+      }
     },
 
     {
       "id": 11,
-      "class": "lc-button--default is-round"
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
+      }
     },
     {
       "id": 12,
-      "class": "lc-button--primary is-round"
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(64, 158, 255)"
+      }
     },
     {
       "id": 13,
-      "class": "lc-button--success is-round"
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#67c23a"
+      }
     },
     {
       "id": 14,
-      "class": "lc-button--info is-round"
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#909399"
+      }
     },
     {
       "id": 15,
-      "class": "lc-button-danger is-round"
+      "class": "danger",
+      "size": "",
+      "disabled": false,
+      "round": true,
+      "plain": false,
+      "value": "按钮",
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f56c6c"
+      }
     },
 
     {
       "id": 16,
-      "class": "lc-button--default is-disabled"
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
+      }
     },
     {
       "id": 17,
-      "class": "lc-button--primary is-disabled"
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#a0cfff"
+      }
     },
     {
       "id": 18,
-      "class": "lc-button--success is-disabled"
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#b3e19d"
+      }
     },
     {
       "id": 19,
-      "class": "lc-button--info is-disabled"
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(64, 158, 255)"
+      }
     },
     {
       "id": 20,
-      "class": "lc-button-danger is-disabled"
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#c8c9cc"
+      }
     },
 
     {
       "id": 21,
-      "class": "lc-button--default is-disabled is-plain"
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
+      }
     },
     {
       "id": 22,
-      "class": "lc-button--primary is-disabled is-plain"
+      "class": "primary",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#ecf5ff"
+      }
     },
     {
       "id": 23,
-      "class": "lc-button--success is-disabled is-plain"
+      "class": "success",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f0f9eb"
+      }
     },
     {
       "id": 24,
-      "class": "lc-button--info is-disabled is-plain"
+      "class": "info",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#f4f4f5"
+      }
     },
     {
       "id": 25,
-      "class": "lc-button-danger is-disabled is-plain"
+      "class": "danger",
+      "value": "按钮",
+      "size": "",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "#fef0f0"
+      }
     },
 
     {
       "id": 26,
-      "class": "lc-button--default"
+      "class": "default",
+      "value": "按钮",
+      "size": "",
+      "disabled": false,
+      "round": false,
+      "plain": false,
+      "style": {
+        "height": "40px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
+      }
     },
     {
       "id": 27,
-      "class": "lc-button--default lc-button--medium"
+      "class": "default",
+      "value": "按钮",
+      "size": "medium",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "36px",
+        "width": "98px",
+        "backgroundColor": "rgb(255, 255, 255)"
+      }
     },
     {
       "id": 28,
-      "class": "lc-button--default lc-button--small"
-    },
+      "class": "default",
+      "value": "按钮",
+      "size": "small",
+      "disabled": true,
+      "round": false,
+      "plain": true,
+      "style": {
+        "height": "32px",
+        "width": "80px",
+        "backgroundColor": "rgb(64, 158, 255)"
+      }
+    }
   ]
 };

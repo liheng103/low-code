@@ -39,33 +39,25 @@
     <lc-button size="medium">medium</lc-button>
     <lc-button size="small">small</lc-button>
   </div>
-  <div>
-    <!-- <lc-button class="primary">123</lc-button> -->
-    <!-- <template v-for=""></template> -->
-  </div>
 </template>
 
 <script>
-  import lcButton from '../rawComponents/button';
-  import { ref } from 'vue';
-  export default {
-    components: {
-      lcButton
-    },
-    setup() {
-      const butttonRef = ref();
-
-      return {
-        butttonRef
-      };
-    }
-  };
+import lcButton from '../rawComponents/button';
+import { ref } from 'vue';
+export default {
+  components: {
+    lcButton
+  },
+  setup() {
+    const butttonRef = ref();
+    return {
+      butttonRef
+    };
+  }
+};
 </script>
 <style scoped>
-  .button {
-    width: 100%;
-  }
-  div {
-    margin-bottom: 20px;
-  }
+div {
+  margin-bottom: 20px;
+}
 </style>
