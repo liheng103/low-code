@@ -139,6 +139,7 @@
   }
   .main {
     overflow: scroll;
+    flex: 1;
     padding: 0 10px;
   }
   ::-webkit-scrollbar {
