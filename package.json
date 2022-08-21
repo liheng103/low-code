@@ -17,6 +17,7 @@
     "element-plus": "^2.2.13",
     "html2canvas": "^1.4.1",
     "keymaster": "^1.6.2",
+    "split.js": "^1.6.5",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"

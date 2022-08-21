@@ -17,7 +17,9 @@
               <el-link type="primary" @click="previewModeChange">{{ previewMode ? '桌面' : '手机' }}模式</el-link>
             </el-col>
             <el-col :span="6">
-              <el-button type="primary" @click="handleDownload" size="small" style="float: right">导出</el-button>
+              <el-tooltip class="item" effect="dark" content="快捷键:n+g" placement="bottom-end">
+                <el-button type="primary" @click="handleDownload" size="small" style="float: right">导出</el-button>
+              </el-tooltip>
             </el-col>
           </el-row>
         </div>
@@ -29,27 +31,32 @@
         </div>
       </div>
     </div>
-
-    <code-dialog v-model:codeDialogVisible="this.codeDialogVisible"></code-dialog>
   </div>
 </template>
 <script>
   import { defineAsyncComponent } from 'vue';
-  // import keymaster from "keymaster"
+  import keymaster from "keymaster"
   import html2canvas from 'html2canvas';
-  import Canvas2Image from '@/assets/canvas2image';
+  // import Canvas2Image from '@/assets/canvas2image';
+  import { splitInit } from '@/assets/split-init.js';
   export default {
     components: {
       //仅在页面需要它渲染时才会调用加载内部实际组件的函数
       // ToolsBar: defineAsyncComponent(() => import("./ToolsBar")),
       EditAttribute: defineAsyncComponent(() => import('./EditAttribute')),
-      NewRawComponents: defineAsyncComponent(() => import('./NewRawComponents'))
+      NewRawComponents: defineAsyncComponent(() => import('./NewRawComponents')),
     },
     data() {
       return {
         codeDialogVisible: false,
-        previewMode: false
+        previewMode: false,
+        initFlag: false,
       };
+    },
+    mounted() {
+
+      splitInit();
+      this.initKeyboard();
     },
     methods: {
       //切换手机/桌面模式
@@ -62,6 +69,7 @@
           previewElem.style = 'width:100%;';
         }
       },
+      //下载预览区图片
       handleDownload() {
         var downloadContent = document.querySelector('#renderControlPanel');
         // var width = downloadContent.offsetWidth
@@ -120,6 +128,13 @@
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
+        });
+      },
+      initKeyboard() {
+        //保存image的快捷键
+        keymaster('n+g', () => {
+          this.handleDownload();
+          return false
         });
       }
     }
