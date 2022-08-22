@@ -8,6 +8,7 @@
         <edit-attribute :enableRemoveButton="true" class="attribute" @save="onSaveAttr" @remove="onRemove" ref="attributeInput" shortcutInitMode="hand" :__rawVueInfo__="currentEditRawInfo">
         </edit-attribute>
       </div>
+      <StyleBar/>
     </div>
     <div class="rightMain">
       <div class="ReviewNav">
@@ -24,13 +25,12 @@
       </div>
       <div class="ReviewCon">
         <div id="renderControlPanel">
-          <!--这里不能放任何东西，执行时会被清空-->
-          <!-- <div>1234</div> -->
+          <RenderControlPanel />
         </div>
       </div>
     </div>
 
-    <code-dialog v-model:codeDialogVisible="this.codeDialogVisible"></code-dialog>
+    <code-dialog v-model:codeDialogVisible = "this.codeDialogVisible"></code-dialog>
   </div>
 </template>
 <script>
@@ -38,12 +38,16 @@
   // import keymaster from "keymaster"
   import html2canvas from 'html2canvas';
   import Canvas2Image from '@/assets/canvas2image';
+  import StyleBar from './StyleBar.vue'
+  import RenderControlPanel from './RenderControlPanel.vue'
   export default {
     components: {
       //仅在页面需要它渲染时才会调用加载内部实际组件的函数
       // ToolsBar: defineAsyncComponent(() => import("./ToolsBar")),
       EditAttribute: defineAsyncComponent(() => import('./EditAttribute')),
-      NewRawComponents: defineAsyncComponent(() => import('./NewRawComponents'))
+      NewRawComponents: defineAsyncComponent(() => import('./NewRawComponents')),
+      RenderControlPanel,
+      StyleBar
     },
     data() {
       return {
@@ -64,48 +68,6 @@
       },
       handleDownload() {
         var downloadContent = document.querySelector('#renderControlPanel');
-        // var width = downloadContent.offsetWidth
-        // var height = downloadContent.offsetHeight
-        // var canvas = document.createElement('canvas')
-        // var scale = 2
-        // canvas.width = width * scale
-        // canvas.height = height * scale
-        // canvas.getContext('2d').scale(scale, scale)
-        // var opts = {
-        //   scale: scale,
-        //   canvas: canvas,
-        //   width: width,
-        //   height: height,
-        //   // 避免下载不全
-        //   backgroundColor: null,
-        //   // 【重要】开启跨域配置
-        //   useCORS: true
-        // }
-
-        // html2canvas(downloadContent, opts).then((canvas) => {
-        //   var context = canvas.getContext('2d')
-        //   // 【重要】关闭抗锯齿
-        //   context.mozImageSmoothingEnabled = false
-        //   context.webkitImageSmoothingEnabled = false
-        //   context.msImageSmoothingEnabled = false
-        //   context.imageSmoothingEnabled = false
-
-        //   var img = Canvas2Image.convertToPNG(canvas, canvas.width/2, canvas.height/2)
-        //   // 下载图片
-        //   let a = document.createElement('a')
-        //   document.body.appendChild(a)
-        //   a.href = img.src
-        //   // 设置下载标题
-        //   var date = new Date();
-        //   var year = date.getFullYear();
-        //   var month = date.getMonth() + 1;
-        //   var day = date.getDate();
-        //   var mytime = date.toLocaleTimeString();     //获取当前时间
-        //   var time = year + "-" + month + "-" + day + ' ' + mytime;
-        //   a.download = "页面" + time; // 图片名字
-        //   a.click()
-
-        // })
         html2canvas(downloadContent).then((canvas) => {
           let url = canvas.toDataURL('image/png');
           let link = document.createElement('a');
@@ -145,7 +107,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 40%;
+    width: 600px;
   }
   .component {
     height: 70vh;

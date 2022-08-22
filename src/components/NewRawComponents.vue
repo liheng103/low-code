@@ -7,28 +7,6 @@
       </div>
     </nav>
     <div class="main">
-      <!-- <div v-for="items in componentAll[this.currentIndex]" :key="items.index">
-        <div
-          v-for="item in items"
-          :key="item.index"
-          style="margin-bottom: 20px"
-        >
-          <button v-if="item.tag == 'button'" :id="item.id" :style="item.style">
-            {{ item.value }}
-          </button>
-          <img
-            v-if="item.tag == 'img'"
-            :id="item.id"
-            :style="item.style"
-            :src="item.src"
-          />
-          <video
-            v-if="item.tag == 'video'"
-            :id="item.id"
-            :style="item.style"
-          ></video>
-        </div>
-      </div> -->
       <keep-alive>
         <component :is="componentName"></component>
       </keep-alive>
@@ -114,12 +92,11 @@
     height: 100%;
   }
   .dismissScroll {
-    overflow: scroll;
+    /*overflow: scroll;*/
     border-right: 1px solid #f0f0f0;
   }
   .nav {
-    padding: 10px 15px;
-    width: 130px;
+    padding: 10px 20px;
     &:hover {
       background-color: #ecf5ff;
       border-radius: 5px;
