@@ -8,7 +8,7 @@
         <edit-attribute :enableRemoveButton="true" class="attribute" @save="onSaveAttr" @remove="onRemove" ref="attributeInput" shortcutInitMode="hand" :__rawVueInfo__="currentEditRawInfo">
         </edit-attribute>
       </div>
-      <StyleBar/>
+      <StyleBar />
     </div>
     <div class="rightMain">
       <div class="ReviewNav">
@@ -16,6 +16,7 @@
           <el-row>
             <el-col :span="18">
               <el-link type="primary" @click="previewModeChange">{{ previewMode ? '桌面' : '手机' }}模式</el-link>
+              <el-button type="primary" @click="InputBkg" size="small" disabled style="margin-left:15px">导入背景图</el-button>
             </el-col>
             <el-col :span="6">
               <el-tooltip class="item" effect="dark" content="快捷键:n+g" placement="bottom-end">
@@ -26,7 +27,7 @@
         </div>
       </div>
       <div class="ReviewCon">
-        <div id="renderControlPanel">
+        <div id="renderControlPanel" :style="imageBkg">
           <RenderControlPanel />
         </div>
       </div>
@@ -57,6 +58,7 @@
         codeDialogVisible: false,
         previewMode: false,
         initFlag: false,
+        imageBkg: ''
       };
     },
     mounted() {
@@ -100,6 +102,9 @@
           this.handleDownload();
           return false
         });
+      },
+      InputBkg() {
+
       }
     }
   };
