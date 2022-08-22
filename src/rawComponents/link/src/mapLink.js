@@ -1,5 +1,5 @@
 export default {
-  "type": "button",
+  "type": "link",
   "data": [
     {
       "id": 1,
