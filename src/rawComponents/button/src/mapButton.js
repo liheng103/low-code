@@ -4,7 +4,7 @@ export default {
     {
       id: 1,
       class: 'default',
-      value: '按钮',
+      value: 'default',
       size: '',
       disabled: false,
       round: false,
@@ -18,7 +18,7 @@ export default {
     {
       id: 2,
       class: 'primary',
-      value: '按钮',
+      value: 'primary',
       size: '',
       disabled: false,
       round: false,
@@ -32,7 +32,7 @@ export default {
     {
       id: 3,
       class: 'success',
-      value: '按钮',
+      value: 'success',
       size: '',
       disabled: false,
       round: false,
@@ -46,7 +46,7 @@ export default {
     {
       id: 4,
       class: 'info',
-      value: '按钮',
+      value: 'info',
       size: '',
       disabled: false,
       round: false,
@@ -60,7 +60,7 @@ export default {
     {
       id: 5,
       class: 'danger',
-      value: '按钮',
+      value: 'danger',
       size: '',
       disabled: false,
       round: false,
@@ -75,7 +75,7 @@ export default {
     {
       id: 6,
       class: 'default',
-      value: '按钮',
+      value: 'plain',
       size: '',
       disabled: false,
       round: false,
@@ -89,7 +89,7 @@ export default {
     {
       id: 7,
       class: 'primary',
-      value: '按钮',
+      value: 'plain',
       size: '',
       disabled: false,
       round: false,
@@ -103,7 +103,7 @@ export default {
     {
       id: 8,
       class: 'success',
-      value: '按钮',
+      value: 'plain',
       size: '',
       disabled: false,
       round: false,
@@ -117,7 +117,7 @@ export default {
     {
       id: 9,
       class: 'info',
-      value: '按钮',
+      value: 'plain',
       size: '',
       disabled: false,
       round: false,
@@ -131,7 +131,7 @@ export default {
     {
       id: 10,
       class: 'danger',
-      value: '按钮',
+      value: 'plain',
       size: '',
       disabled: false,
       round: false,
@@ -146,7 +146,7 @@ export default {
     {
       id: 11,
       class: 'default',
-      value: '按钮',
+      value: 'round',
       size: '',
       disabled: false,
       round: true,
@@ -160,7 +160,7 @@ export default {
     {
       id: 12,
       class: 'primary',
-      value: '按钮',
+      value: 'round',
       size: '',
       disabled: false,
       round: true,
@@ -174,7 +174,7 @@ export default {
     {
       id: 13,
       class: 'success',
-      value: '按钮',
+      value: 'round',
       size: '',
       disabled: false,
       round: true,
@@ -188,7 +188,7 @@ export default {
     {
       id: 14,
       class: 'info',
-      value: '按钮',
+      value: 'round',
       size: '',
       disabled: false,
       round: true,
@@ -206,7 +206,7 @@ export default {
       disabled: false,
       round: true,
       plain: false,
-      value: '按钮',
+      value: 'round',
       style: {
         height: '40px',
         width: '98px',
@@ -217,7 +217,7 @@ export default {
     {
       id: 16,
       class: 'default',
-      value: '按钮',
+      value: 'disabled',
       size: '',
       disabled: true,
       round: false,
@@ -231,7 +231,7 @@ export default {
     {
       id: 17,
       class: 'primary',
-      value: '按钮',
+      value: 'disabled',
       size: '',
       disabled: true,
       round: false,
@@ -245,7 +245,7 @@ export default {
     {
       id: 18,
       class: 'success',
-      value: '按钮',
+      value: 'disabled',
       size: '',
       disabled: true,
       round: false,
@@ -259,7 +259,7 @@ export default {
     {
       id: 19,
       class: 'info',
-      value: '按钮',
+      value: 'disabled',
       size: '',
       disabled: true,
       round: false,
@@ -273,7 +273,7 @@ export default {
     {
       id: 20,
       class: 'danger',
-      value: '按钮',
+      value: 'disabled',
       size: '',
       disabled: true,
       round: false,
@@ -288,7 +288,7 @@ export default {
     {
       id: 21,
       class: 'default',
-      value: '按钮',
+      value: 'disabled plain',
       size: '',
       disabled: true,
       round: false,
@@ -302,7 +302,7 @@ export default {
     {
       id: 22,
       class: 'primary',
-      value: '按钮',
+      value: 'disabled plain',
       size: '',
       disabled: true,
       round: false,
@@ -316,7 +316,7 @@ export default {
     {
       id: 23,
       class: 'success',
-      value: '按钮',
+      value: 'disabled plain',
       size: '',
       disabled: true,
       round: false,
@@ -330,7 +330,7 @@ export default {
     {
       id: 24,
       class: 'info',
-      value: '按钮',
+      value: 'disabled plain',
       size: '',
       disabled: true,
       round: false,
@@ -344,7 +344,7 @@ export default {
     {
       id: 25,
       class: 'danger',
-      value: '按钮',
+      value: 'disabled plain',
       size: '',
       disabled: true,
       round: false,
@@ -359,7 +359,7 @@ export default {
     {
       id: 26,
       class: 'default',
-      value: '按钮',
+      value: 'default',
       size: '',
       disabled: false,
       round: false,
@@ -373,7 +373,7 @@ export default {
     {
       id: 27,
       class: 'default',
-      value: '按钮',
+      value: 'medium',
       size: 'medium',
       disabled: true,
       round: false,
@@ -387,7 +387,7 @@ export default {
     {
       id: 28,
       class: 'default',
-      value: '按钮',
+      value: 'small',
       size: 'small',
       disabled: true,
       round: false,

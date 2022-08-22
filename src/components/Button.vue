@@ -1,15 +1,5 @@
 <template>
-  <lc-button
-    v-for = "(item,index) in buttonJson"
-    :key = index
-    :type = item.class
-    :id = item.id
-    :isview = "false"
-    :plain = item.plain
-    :circle = item.circle
-    :round = item.round
-    tag = "button"
-  >{{item.value}}</lc-button>
+  <lc-button v-for="(item,index) in buttonJson" :key=index :type=item.class :id=item.id :isview="false" :plain=item.plain :circle=item.circle :round=item.round :disabled=item.disabled :size=item.size tag="button">{{item.value}}</lc-button>
 </template>
 
 <script>
@@ -34,7 +24,4 @@
   };
 </script>
 <style scoped>
-div {
-  margin-bottom: 20px;
-}
 </style>
