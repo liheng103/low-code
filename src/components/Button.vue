@@ -5,7 +5,7 @@
 <script>
   import lcButton from '../rawComponents/button';
   import { ref } from 'vue';
-  import mapButton from '../rawComponents/button/src/mapButton'
+  import mapButton from '../rawComponents/button/src/mapButton';
 
   export default {
     components: {
@@ -13,8 +13,8 @@
     },
     setup() {
       const butttonRef = ref();
-      const buttonJson = mapButton.data
-      const type = mapButton.type
+      const buttonJson = mapButton.data;
+      const type = mapButton.type;
       return {
         buttonJson,
         type,

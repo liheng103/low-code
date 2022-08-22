@@ -375,7 +375,7 @@ export default {
       class: 'default',
       value: 'medium',
       size: 'medium',
-      disabled: true,
+      disabled: false,
       round: false,
       plain: true,
       style: {
@@ -389,7 +389,7 @@ export default {
       class: 'default',
       value: 'small',
       size: 'small',
-      disabled: true,
+      disabled: false,
       round: false,
       plain: true,
       style: {
