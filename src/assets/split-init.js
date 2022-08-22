@@ -1,4 +1,5 @@
 import Split from 'split.js';
+import useDrag from '@/hooks/useDrag';
 // 拆分视图面板
 export function splitInit() {
   let sizes = localStorage.getItem('split-sizes');
@@ -6,12 +7,14 @@ export function splitInit() {
 
   if (sizes) {
     sizes = JSON.parse(sizes);
+    useDrag();
   } else {
     sizes = [50, 50]; // default sizes
   }
 
   if (sizeCodes) {
     sizeCodes = JSON.parse(sizeCodes);
+    useDrag();
   } else {
     sizeCodes = [70, 30]; // default sizes
   }
