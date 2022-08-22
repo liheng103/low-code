@@ -1,9 +1,9 @@
 <template>
   <button
-    :style="positionStyle"
     class="lc-button"
     :disabled="propsCopy.disabled"
     draggable="true"
+    :style="positionStyle"
     @dragstart="dragStart($event)"
     @dragend="isViewOrComponent($event)"
     @click="transferStyleInfo(propsCopy.index)"

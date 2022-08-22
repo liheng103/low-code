@@ -4,10 +4,6 @@
       <nav class="component">
         <new-raw-components></new-raw-components>
       </nav>
-      <div class="editPart">
-        <edit-attribute :enableRemoveButton="true" class="attribute" @save="onSaveAttr" @remove="onRemove" ref="attributeInput" shortcutInitMode="hand" :__rawVueInfo__="currentEditRawInfo">
-        </edit-attribute>
-      </div>
       <StyleBar />
     </div>
     <div class="rightMain">
@@ -16,7 +12,6 @@
           <el-row>
             <el-col :span="18">
               <el-link type="primary" @click="previewModeChange">{{ previewMode ? '桌面' : '手机' }}模式</el-link>
-              <el-button type="primary" @click="InputBkg" size="small" disabled style="margin-left:15px">导入背景图</el-button>
             </el-col>
             <el-col :span="6">
               <el-tooltip class="item" effect="dark" content="快捷键:n+g" placement="bottom-end">
@@ -36,19 +31,16 @@
 </template>
 <script>
   import { defineAsyncComponent } from 'vue';
-  import keymaster from "keymaster"
+  import keymaster from 'keymaster';
   import html2canvas from 'html2canvas';
-  import Canvas2Image from '@/assets/canvas2image';
-  import StyleBar from './StyleBar.vue'
-  import RenderControlPanel from './RenderControlPanel.vue'
+  import StyleBar from './StyleBar.vue';
+  import RenderControlPanel from './RenderControlPanel.vue';
   // import Canvas2Image from '@/assets/canvas2image';
   import { splitInit } from '@/assets/split-init.js';
 
+
   export default {
     components: {
-      //仅在页面需要它渲染时才会调用加载内部实际组件的函数
-      // ToolsBar: defineAsyncComponent(() => import("./ToolsBar")),
-      EditAttribute: defineAsyncComponent(() => import('./EditAttribute')),
       NewRawComponents: defineAsyncComponent(() => import('./NewRawComponents')),
       RenderControlPanel,
       StyleBar
@@ -58,11 +50,10 @@
         codeDialogVisible: false,
         previewMode: false,
         initFlag: false,
-        imageBkg: ''
+
       };
     },
     mounted() {
-
       splitInit();
       this.initKeyboard();
     },
@@ -103,9 +94,6 @@
           return false
         });
       },
-      InputBkg() {
-
-      }
     }
   };
 </script>
