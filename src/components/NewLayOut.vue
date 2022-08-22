@@ -70,14 +70,6 @@
           previewElem.style = 'width:100%;';
         }
       },
-      // 获取设备dpi
-      DPR() {
-        if (window.devicePixelRatio && window.devicePixelRatio > 1) {
-          return window.devicePixelRatio;
-        }
-        return 1;
-      },
-
       //下载预览区图片
       handleDownload() {
         var downloadContent = document.querySelector('#renderControlPanel');
