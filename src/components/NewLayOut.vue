@@ -23,7 +23,9 @@
       </div>
       <div class="ReviewCon">
         <div id="renderControlPanel">
-          <RenderControlPanel />
+          <div style=" position: relative;">
+            <RenderControlPanel />
+          </div>
         </div>
       </div>
     </div>
@@ -150,6 +152,7 @@
   }
   .ReviewCon {
     // height: 0;
+    width: 100%;
     height: 96vh;
     flex-grow: 1;
     display: flex;
