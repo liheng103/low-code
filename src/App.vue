@@ -4,17 +4,16 @@
   </div>
 </template>
 <script>
-// import LayOut from '@/components/LayOut.vue'
-import NewLayOut from '@/components/NewLayOut.vue';
-export default {
-  components: {
-    NewLayOut
-  },
-  data() {
-    return {};
-  },
-  methods: {}
-};
+  import NewLayOut from '@/components/NewLayOut';
+  export default {
+    components: {
+      NewLayOut
+    },
+    data() {
+      return {};
+    },
+    methods: {}
+  };
 </script>
 
 <style lang="scss"></style>

@@ -34,7 +34,7 @@
   };
 </script>
 <style scoped>
-  div {
-    margin-bottom: 20px;
-  }
+div {
+  margin-bottom: 20px;
+}
 </style>

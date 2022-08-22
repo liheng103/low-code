@@ -1,14 +1,7 @@
 <template>
-<span :style = "positionStyle">
-  <button 
-      class="lc-button" 
-      :disabled = "propsCopy.disabled" 
-      draggable = "true"
-      @dragstart = "dragStart($event)"
-      @dragend = "isViewOrComponent($event)"
-      @click = "transferStyleInfo(propsCopy.index)"
-      :style = "propsCopy.style"
-      :class="[
+
+  <span :style="positionStyle">
+    <button class="lc-button" :disabled="propsCopy.disabled" draggable="true" @dragstart="dragStart($event)" @dragend="isViewOrComponent($event)" @click="transferStyleInfo(propsCopy.index)" :style="propsCopy.style" :class="[
       type ? 'lc-button--' + propsCopy.type : '',
       size ? 'lc-button--' + propsCopy.size : '',
       {
@@ -18,16 +11,16 @@
         'is-circle': propsCopy.circle
       }
     ]">
-    <i v-if="icon" :class="icon"></i>
-    <span>
-      <slot v-if="$slots.default"></slot>
-    </span>
-  </button>
-</span>
+      <i v-if="icon" :class="icon"></i>
+      <span>
+        <slot v-if="$slots.default"></slot>
+      </span>
+    </button>
+  </span>
 </template>
 
 <script>
-  import { ref,computed } from 'vue';
+  import { ref, computed } from 'vue';
   import useDrag from '../../../hooks/useDrag'
   import useStyle from '../../../hooks/useStyle'
 
@@ -47,49 +40,49 @@
       plain: Boolean,
       round: Boolean,
       circle: Boolean,
-      isview:Boolean,
-      id:Number,
-      value:String,
-      tag:String,
-      coordinate:Array,
-      style:Object,
-      index:Number
+      isview: Boolean,
+      id: Number,
+      value: String,
+      tag: String,
+      coordinate: Array,
+      style: Object,
+      index: Number
     },
     emits: ['click'],
     setup(props) {
       const propsCopy = ref({ ...props });
-      const { dragToView,dragStart,dragEnd } = useDrag()
-      const { transferStyleInfo } = useStyle() 
+      const { dragToView, dragStart, dragEnd } = useDrag()
+      const { transferStyleInfo } = useStyle()
       const x = computed({
-        get(){
-          return props.isview?props.coordinate[0]:null
+        get() {
+          return props.isview ? props.coordinate[0] : null
         },
-        setup(){
-          return props.isview?props.coordinate[0]:null
+        setup() {
+          return props.isview ? props.coordinate[0] : null
         }
       })
 
       const y = computed({
-        get(){
-          return props.coordinate?props.coordinate[1]:null
+        get() {
+          return props.coordinate ? props.coordinate[1] : null
         },
-        setup(){
-          return props.coordinate?props.coordinate[1]:null
+        setup() {
+          return props.coordinate ? props.coordinate[1] : null
         }
       })
 
       const positionStyle = computed({
-        get(){
-          return (x.value&&y.value)?`left:${x.value}px;top:${y.value}px;position:absolute`:""
+        get() {
+          return (x.value && y.value) ? `left:${x.value}px;top:${y.value}px;position:absolute` : ""
         },
-        set(){
-          return (x.value&&y.value)?`left:${x.value}px;top:${y.value}px;position:absolute`:""
+        set() {
+          return (x.value && y.value) ? `left:${x.value}px;top:${y.value}px;position:absolute` : ""
         }
       })
 
       //看是在预览区拖拽还是在组件区拖拽
-      function isViewOrComponent($event){
-        return props.isview?dragEnd($event):dragToView($event,propsCopy)
+      function isViewOrComponent($event) {
+        return props.isview ? dragEnd($event) : dragToView($event, propsCopy)
       }
 
       return {
